@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vacation Resort - Activities Planner</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Vacation Resort</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="overnight-cost-estimator.html">Overnight Cost Estimator</a></li>
+          <li><a href="dining-options.html">Dining Options</a></li>
+          <li><a href="rental-car.html">Rental Car</a></li>
+          <li class="active"><a href="activities.html">Activities Planner</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Activities Planner</h2>
+      <form id="activities-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="check-in-date">Check-in date:</label>
+        <input type="date" id="check-in-date" name="check-in-date" required>
+        <fieldset>
+          <legend>Activities:</legend>
+          <label>
+            <input type="checkbox" name="activities" value="golf">Golf
+          </label>
+          <label>
+            <input type="checkbox" name="activities" value="tennis">Tennis
+          </label>
+          <label>
+            <input type="checkbox" name="activities" value="swimming">Swimming
+          </label>
+          <label>
+            <input type="checkbox" name="activities" value="spa">Spa
+          </label>
+          <label>
+            <input type="checkbox" name="activities" value="hiking">Hiking
+          </label>
+        </fieldset>
+        <button type="submit">Submit</button>
+      </form>
+      <div id="activities-result"></div>
+    </main>
+    <footer>
+      <p>&copy; 2023 Vacation Resort. All rights reserved.</p>
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

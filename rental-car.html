@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vacation Resort</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Vacation Resort</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="overnight-cost-estimator.html">Overnight Cost Estimator</a></li>
+                <li><a href="dining-options.html">Dining Options</a></li>
+                <li><a href="car-rental.html">Rental Car</a></li>
+                <li><a href="activities.html">Activities</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Rental Car</h2>
+        <p>We partner with several rental car companies to provide our guests with a convenient way to explore the area. Please fill out the form below to reserve a car:</p>
+        <form id="car-rental-form">
+            <label for="pickup-location">Pickup location:</label>
+            <select id="pickup-location" name="pickup-location" required>
+                <option value="">Select a pickup location</option>
+                <option value="airport">Airport</option>
+                <option value="downtown">Downtown</option>
+                <option value="hotel">Hotel</option>
+            </select>
+            <label for="return-location">Return location:</label>
+            <select id="return-location" name="return-location" required>
+                <option value="">Select a return location</option>
+                <option value="airport">Airport</option>
+                <option value="downtown">Downtown</option>
+                <option value="hotel">Hotel</option>
+            </select>
+            <label for="pickup-date">Pickup date:</label>
+            <input type="date" id="pickup-date" name="pickup-date" required>
+            <label for="return-date">Return date:</label>
+            <input type="date" id="return-date" name="return-date" required>
+            <fieldset>
+                <legend>Car type:</legend>
+                <label>
+                    <input type="radio" name="car-type" value="economy" required>Economy
+                </label>
+                <label>
+                    <input type="radio" name="car-type" value="midsize">Midsize
+                </label>
+                <label>
+                    <input type="radio" name="car-type" value="luxury">Luxury
+                </label>
+            </fieldset>
+            <button type="submit">Reserve Car</button>
+        </form>
+        <div id="car-rental-result"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Vacation Resort. All rights reserved.</p>
+    </footer>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

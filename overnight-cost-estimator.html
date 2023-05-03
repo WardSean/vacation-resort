@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vacation Resort</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Vacation Resort</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="overnight-cost-estimator.html">Overnight Cost Estimator</a></li>
+                <li><a href="dining-options.html">Dining Options</a></li>
+                <li><a href="rental-car.html">Rental Car</a></li>
+                <li><a href="activities.html">Activities</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Overnight Cost Estimator</h2>
+        <form id="cost-estimator-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="check-in-date">Check-in date:</label>
+            <input type="date" id="check-in-date" name="check-in-date" required>
+            <label for="number-of-nights">Number of nights:</label>
+            <input type="number" id="number-of-nights" name="number-of-nights" min="1" max="28" required>
+            <fieldset>
+                <legend>Room type:</legend>
+                <label>
+                    <input type="radio" name="room-type" value="queen" required>Queen
+                </label>
+                <label>
+                    <input type="radio" name="room-type" value="king">King
+                </label>
+                <label>
+                    <input type="radio" name="room-type" value="2-bedroom-suite">2-Bedroom Suite
+                </label>
+            </fieldset>
+            <label for="number-of-adults">Number of adults:</label>
+            <input type="number" id="number-of-adults" name="number-of-adults" min="1" max="4" required>
+            <label for="number-of-children">Number of children:</label>
+            <input type="number" id="number-of-children" name="number-of-children" min="0" max="4" required>
+            <fieldset>
+                <legend>Discounts:</legend>
+                <label>
+                    <input type="radio" name="discounts" value="none" checked>None
+                </label>
+                <label>
+                    <input type="radio" name="discounts" value="aaa">AAA Member Discount</label>
+                <label>
+                    <input type="radio" name="discounts" value="senior">Senior Discount
+                </label>
+                <label>
+                    <input type="radio" name="discounts" value="military">Military Discount
+                </label>
+            </fieldset>
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="cost-estimation-result"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Vacation Resort. All rights reserved.</p>
+    </footer>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
