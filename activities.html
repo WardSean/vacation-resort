@@ -1,56 +1,188 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Vacation Resort - Activities Planner</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
-    <header>
-      <h1>Vacation Resort</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="overnight-cost-estimator.html">Overnight Cost Estimator</a></li>
-          <li><a href="dining-options.html">Dining Options</a></li>
-          <li><a href="rental-car.html">Rental Car</a></li>
-          <li class="active"><a href="activities.html">Activities Planner</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <h2>Activities Planner</h2>
-      <form id="activities-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <label for="check-in-date">Check-in date:</label>
-        <input type="date" id="check-in-date" name="check-in-date" required>
-        <fieldset>
-          <legend>Activities:</legend>
-          <label>
-            <input type="checkbox" name="activities" value="golf">Golf
-          </label>
-          <label>
-            <input type="checkbox" name="activities" value="tennis">Tennis
-          </label>
-          <label>
-            <input type="checkbox" name="activities" value="swimming">Swimming
-          </label>
-          <label>
-            <input type="checkbox" name="activities" value="spa">Spa
-          </label>
-          <label>
-            <input type="checkbox" name="activities" value="hiking">Hiking
-          </label>
-        </fieldset>
-        <button type="submit">Submit</button>
-      </form>
-      <div id="activities-result"></div>
-    </main>
-    <footer>
-      <p>&copy; 2023 Vacation Resort. All rights reserved.</p>
-    </footer>
-    <script type="text/javascript" src="script.js"></script>
-  </body>
-</html>
+
+<head>
+  <title>Vacation Resort - Activities Planner</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+  <header>
+    <h1>Vacation Resort</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="overnight-cost-estimator.html">Overnight Cost Estimator</a></li>
+        <li><a href="dining-options.html">Dining Options</a></li>
+        <li><a href="rental-car.html">Rental Car</a></li>
+        <li class="active"><a href="activities.html">Activities Planner</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Activities Planner</h2>
+    <form id="activities-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="check-in-date">Check-in date:</label>
+      <input type="date" id="check-in-date" name="check-in-date" required>
+      <label for="activityTypesSelect">Select a category:</label>
+      <select id="activityTypesSelect" class="form-control">
+        <option value="Arts/Crafts">Arts/Crafts</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Museums/Culture">Museums/Culture</option>
+        <option value="Sports">Sports</option>
+        <option value="Leisure">Leisure</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
+    <div class="container-fluid mt-3">
+      <div id="Arts/Crafts" class="row category">
+        <div class="col-sm-6 col-lg-4 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Candle Making</h5>
+              <p class="card-text">Spend two hours learning to make scented candles. All supplies are included.</p>
+              <p class="card-text">$7.99</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Painting with Wine</h5>
+              <p class="card-text">Enjoy a glass of wine while you learn to paint. All supplies are included.</p>
+              <p class="card-text">$19.99</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Adventure" class="row category" style="display: none;">
+        <div class="col-sm-6 col-lg-4 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Ziplining the Canyon</h5>
+              <p class="card-text">Soar over the canyon on our zipline course. Includes all necessary equipment and
+                instruction.</p>
+              <p class="card-text">$89.99</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Rock Climbing</h5>
+              <p class="card-text">Experience the thrill of climbing on real rock. Includes all necessary equipment and
+                instruction.</p>
+              <p class="card-text">$79.99</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Museums/Culture" class="row category" style="display: none;">
+        <div class="col-sm-6 col-lg-4 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Local Art Museum</h5>
+              <p class="card-text">Explore the local art scene with a visit to our art museum. Admission is included.
+              </p>
+              <p class="card-text">$9.99</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Historic Walking Tour</h5>
+              <p class="card-text">Learn about the history of our town with a guided walking tour. Reservations
+                required.</p>
+              <p class="card-text">$14.99</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Sports" class="row category" style="display: none;">
+        <div class="col-sm-6 col-lg-4 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Golf Outing</h5>
+              <p class="card-text">Enjoy a round of golf on our scenic course. Includes cart rental.</p>
+              <p class="card-text">$39.99</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Tennis Clinic</h5>
+              <p class="card-text">Brush up on your tennis skills with a group clinic led by our experienced
+                instructors.</p>
+              <p class="card-text">$29.99</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Leisure" class="row category" style="display: none;">
+        <div class="col-sm-6 col-lg-4 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Horseback Riding</h5>
+              <p class="card-text">Explore our scenic trails on horseback. Includes a one-hour guided ride.</p>
+              <p class="card-text">$49.99</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Yoga Class</h5>
+              <p class="card-text">Relax and rejuvenate with a yoga class led by our certified instructors. Mats
+                provided.</p>
+              <p class="card-text">$19.99</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Select your adventure</h5>
+          <p class="card-text">Choose your adventure and book now.</p>
+          <form>
+            <div class="form-group">
+              <label for="category">Adventure category:</label>
+              <select class="form-control" id="category">
+                <option value="All">All</option>
+                <option value="Outdoor">Outdoor</option>
+                <option value="Museums/Culture">Museums/Culture</option>
+                <option value="Sports">Sports</option>
+                <option value="Leisure">Leisure</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="activity">Activity:</label>
+              <select class="form-control" id="activity">
+                <option value="">Select an activity</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="date">Date:</label>
+              <input type="date" class="form-control" id="date">
+            </div>
+            <div class="form-group">
+              <label for="participants">Participants:</label>
+              <input type="number" class="form-control" id="participants" value="1" min="1">
+            </div>
+            <button type="submit" class="btn btn-primary">Book Now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    </div>
+    </div>

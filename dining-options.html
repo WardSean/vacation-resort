@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Vacation Resort</title>
+    <title>Vacation Resort - Dining Options</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -19,26 +19,68 @@
             </ul>
         </nav>
     </header>
-
     <main>
         <h2>Dining Options</h2>
-        <p>Choose from a variety of dining options during your stay:</p>
-        <ul>
-            <li><strong>Resort Restaurant:</strong> Our on-site restaurant serves breakfast, lunch, and dinner daily. 
-                Enjoy fresh, locally sourced ingredients and a variety of cuisine options.</li>
-            <li><strong>Poolside Bar and Grill:</strong> Relax by the pool with a refreshing drink and a quick bite to eat 
-                from our poolside bar and grill.</li>
-            <li><strong>Room Service:</strong> Enjoy a delicious meal from the comfort of your own room with our 24-hour 
-                room service.</li>
-            <li><strong>In-Room Dining Package:</strong> Take advantage of our in-room dining package, which includes a 
-                breakfast, lunch, and dinner delivered to your room each day.</li>
-        </ul>
+        <p>Choose from the following dining options:</p>
+        <input type="radio" name="dining-option" id="pay-as-you-go" value="pay-as-you-go" checked>
+        <label for="pay-as-you-go">Pay as you go</label>
+        <input type="radio" name="dining-option" id="all-inclusive" value="all-inclusive">
+        <label for="all-inclusive">All-inclusive</label>
+        <div id="pay-as-you-go-content">
+            <h3>Restaurants</h3>
+            <ul>
+                <li>
+                    <h4>tocco d'Italia</h4>
+                    <img src="images/restaurant-classy.jpg" alt="tocco d'Italia, fine cuisine">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod libero sed augue pharetra,
+                        vitae finibus ex malesuada.</p>
+                </li>
+                <li>
+                    <h4>Better Burger</h4>
+                    <img src="images/restaurant-vintage.jpg" alt="Better Burger, Burger Joint">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod libero sed augue pharetra,
+                        vitae finibus ex malesuada.</p>
+                </li>
+            </ul>
+        </div>
+        <div id="all-inclusive-content" style="display:none">
+            <h3>All-inclusive Option</h3>
+            <p>The all-inclusive option can be added to your reservation at check-in.</p>
+            <table>
+                <tr>
+                    <th>Plan</th>
+                    <th>Adult</th>
+                    <th>Child</th>
+                </tr>
+                <tr>
+                    <td>Basic</td>
+                    <td>$62.50/day</td>
+                    <td>$49.99/day</td>
+                </tr>
+                <tr>
+                    <td>Premium (incl drinks)</td>
+                    <td>$80.00/day</td>
+                    <td>$49.99/day</td>
+                </tr>
+            </table>
+            <p>If you have already reserved your stay, enter your confirmation number below to calculate the expected
+                dining cost:</p>
+            <form>
+                <input type="text" id="confirmation-number" name="confirmation-number"><br><br>
+                <input type="button" value="Calculate Dining Cost" onclick="calculateDiningCost()"><br><br>
+                <div id="dining-cost-message"></div>
+              </form>
+            <button type="button" id="calculate-cost-btn">Calculate Cost</button>
+            <div id="dining-cost"></div>
+        </div>
     </main>
+
 
     <footer>
         <p>&copy; 2023 Vacation Resort. All rights reserved.</p>
     </footer>
 
+    <script type="text/javascript" src="dining-options.js"></script>
     <script type="text/javascript" src="script.js"></script>
 </body>
 
